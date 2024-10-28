@@ -1,0 +1,19 @@
+class Solution {
+    public int maximumDifference(int[] nums) {
+
+        int maxdif=-1;
+        int temp= nums[0];
+        for(int i=1;i<nums.length;i++){
+            if(temp<nums[i]){
+            int dif1= nums[i]-temp;
+            maxdif=Math.max(dif1,maxdif);
+            }
+            temp=Math.min(temp,nums[i]);
+
+        
+        }
+
+       return maxdif;
+        }
+        
+    }
